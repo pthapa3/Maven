@@ -5,11 +5,13 @@ node{
 	}
 
 	stage('Clean-Compile'){
-		def mvnHOME=tool 'M3'
-		sh '${mvnHOME}/bin/mvn clean compile'
-	
-	}
-
-
-
+		
+	        // Maven installation declared in the Jenkins "Global Tool Configuration"
+	        def mvnHOME= tool name: 'Jenkins_Maven', type: 'maven'
+	 
+	      // Run the maven build
+	      sh '${mvnHOME}/bin/mvn clean compile'
+	 
+	 }
 }
+
