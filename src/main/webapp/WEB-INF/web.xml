@@ -1,0 +1,17 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+  	<servlet-name>GetBookController</servlet-name>
+  	<display-name>GetBookController</display-name>
+  	<description></description>
+	<servlet-class>com.servletmavenweb.GetBookController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>GetBookController</servlet-name>
+  	<url-pattern>/getbook</url-pattern>
+  </servlet-mapping>
+</web-app>
