@@ -10,7 +10,7 @@ node{
 	        def mvnHOME= tool name: 'Jenkins_Maven', type: 'maven'
 	 
 	      // Run the maven build
-	      sh '${mvnHOME}/bin/mvn clean compile'
+	      sh "${mvnHOME}/bin/mvn clean compile"
 	 
 	 }
 }
