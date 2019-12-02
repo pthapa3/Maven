@@ -18,7 +18,7 @@ node{
 
 	 	def mvnHOME= tool name: 'Jenkins_Maven', type: 'maven'
 
-	 	withSonarQubeEnv (SonarQube_Scanner){
+	 	withSonarQubeEnv ('SonarQube_Scanner'){
    			 sh "${mvnHOME}/bin/mvn clean install sonar:sonar"
 		}
 
