@@ -13,5 +13,16 @@ node{
 	      sh "${mvnHOME}/bin/mvn clean compile"
 	 
 	 }
+
+	 stage('SonarQube Analysis and JaCoCo'){
+
+	 	def mvnHOME= tool name: 'Jenkins_Maven', type: 'maven'
+
+	 	withSonarQubeEnv (SonarQube_Scanner){
+   			 sh "${mvnHOME}/bin/mvn clean install sonar:sonar"
+		}
+
+
+	 }
 }
 
